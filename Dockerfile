@@ -1,4 +1,3 @@
-# TODO change to exact version
-FROM rancher/docker-dind-base:latest
+FROM rancher/dind:v0.1.0
 ADD ./start.sh /
 ENTRYPOINT ["/start.sh"]
