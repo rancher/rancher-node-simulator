@@ -8,7 +8,7 @@ if [ $# = 0 ]; then
 fi
 
 wrapdocker
-docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock ${IMAGE} $1
+docker run --rm -it --privileged -v /var/run/docker.sock:/var/run/docker.sock ${IMAGE} $1
 
 while sleep 1; do
     docker logs -f rancher-agent
